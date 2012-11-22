@@ -19,6 +19,10 @@ class SmppFconnection extends Fconnection {
 	boolean sendEnabled = true
 	boolean receiveEnabled = true
 
+	static mapping = {
+		password column: 'smpp_password'
+	}
+
 	List<RouteDefinition> getRouteDefinitions() {
 		return new RouteBuilder() {
 			@Override void configure() {}

@@ -131,6 +131,9 @@ log4j = {
 		'org.springframework',
 		'org.hibernate',
 		'net.sf.ehcache.hibernate'
+	debug 'net.frontlinesms.camel.smslib',
+		'org.smslib',
+		'org.apache.camel'
 }
 
 

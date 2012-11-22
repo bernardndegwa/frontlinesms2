@@ -19,7 +19,8 @@ class Fconnection {
 	static def implementations = [SmslibFconnection,
 			ClickatellFconnection,
 			IntelliSmsFconnection,
-			SmssyncFconnection]
+			SmssyncFconnection,
+			SmppFconnection]
 
 	static getNonnullableConfigFields = { clazz ->
 		def fields = clazz.configFields

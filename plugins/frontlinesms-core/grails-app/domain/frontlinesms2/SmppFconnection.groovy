@@ -24,7 +24,7 @@ class SmppFconnection extends Fconnection {
 			@Override void configure() {}
 			List getRouteDefinitions() {
 				return [from("seda:out-${SmppFconnection.this.id}")
-						.onException()
+						.onException(Exception)
 									.handled(true)
 									.beanRef('fconnectionService', 'handleDisconnection')
 									.end()
